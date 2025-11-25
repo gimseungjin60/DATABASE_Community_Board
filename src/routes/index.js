@@ -26,7 +26,7 @@ router.post('/login', (req, res) => {
             if (user.email === 'admin@example.com') {
                 res.redirect('/admin');
             } else {
-                res.redirect('/todos');
+                res.redirect('/board');
             }
         } else {
             res.render('login', { error: 'Invalid email or password' });

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>글 작성</title>
+</head>
+<body>
+  <h1>글 작성</h1>
+
+  <form action="/board/write" method="POST">
+    <p>
+      제목: <input type="text" name="title" required>
+    </p>
+    <p>
+      작성자: <input type="text" name="writer" required>
+    </p>
+    <p>
+      내용:
+      <br>
+      <textarea name="content" rows="10" cols="50" required></textarea>
+    </p>
+
+    <button type="submit">작성하기</button>
+  </form>
+
+  <a href="/board">목록</a>
+</body>
+</html>

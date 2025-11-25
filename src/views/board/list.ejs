@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>게시판 목록</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>게시판 목록</h1>
+
+  <a href="/board/write">✏️ 새 글 작성</a>
+  <table border="1" width="100%">
+    <tr>
+      <th>ID</th>
+      <th>제목</th>
+      <th>작성자</th>
+      <th>작성일</th>
+      <th>조회수</th>
+    </tr>
+
+    <% boardList.forEach(row => { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><a href="/board/view/<%= row.id %>"><%= row.title %></a></td>
+        <td><%= row.writer %></td>
+        <td><%= row.created_at.toLocaleString() %></td>
+        <td><%= row.hit %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

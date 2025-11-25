@@ -21,12 +21,12 @@ app.use(session({
 
 // Routes
 const indexRouter = require('./routes/index');
-const todosRouter = require('./routes/todos');
+const boardRouter = require('./routes/board');
 const adminRouter = require('./routes/admin');
 const testRouter = require('./routes/test');
 
 app.use('/', indexRouter);
-app.use('/todos', todosRouter);
+app.use('/board', boardRouter);
 app.use('/admin', adminRouter);
 app.use('/test', testRouter);
 

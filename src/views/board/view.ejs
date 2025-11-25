@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= post.title %></title>
+</head>
+<body>
+  <h1><%= post.title %></h1>
+
+  <p><b>작성자:</b> <%= post.writer %></p>
+  <p><b>작성일:</b> <%= post.created_at.toLocaleString() %></p>
+  <p><b>조회수:</b> <%= post.hit %></p>
+
+  <hr>
+
+  <p><%= post.content %></p>
+
+  <hr>
+
+  <a href="/board/modify/<%= post.id %>">✏️ 수정</a>
+  <a href="/board/delete/<%= post.id %>" onclick="return confirm('삭제할까요?')">🗑 삭제</a>
+  <a href="/board">목록</a>
+</body>
+</html>
